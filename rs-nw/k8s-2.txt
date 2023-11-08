@@ -1,0 +1,247 @@
+    1  apt update && apt install docker.io -y
+    2  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+    3  kubectl --version
+    4  echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+    5  sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+    6  kubectl version --client
+    7  kubectl --version
+    8  kubectl version --client --output=yaml
+    9  kubectl --help
+   10  kubectl version
+   11  which kubectl
+   12  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+   13  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+   14  minikube start
+   15  minikube start --driver=none
+   16  minicube status
+   17  apt install conntrack
+   18  minikube start --vm-driver=none
+   19  minikube stop --vm-driver=none
+   20  minikube start --vm-driver=none
+   21  minikube status
+   22  minikube start
+   23  minikube start --driver=none
+   24  minikube stop --vm-driver=none
+   25  minikube status
+   26  ls
+   27  ls -a
+   28  minikube profile list
+   29  minikube start --vm-driver=none --force
+   30  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+   31  sudo dpkg -i minikube_latest_amd64.deb
+   32  minikube start
+   33  minikube start --vm-driver=none
+   34  minikube start --driver=none
+   35  cd /usr/bin/
+   36  ln -s /usr/sbin/conntrack conntrack
+   37  cd -
+   38  minikube start --driver=none
+   39  apt-get install -y conntrack
+   40  pacman -S conntrack-tools
+   41  minikube start --vm-driver=none --force
+   42  docker --version
+   43  minikube start --force
+   44  history 
+   45  minikube status
+   46  kubectl get nodes
+   47  kubectl get pods
+   48  kubectl get pod
+   49  kubectl version
+   50  kubectl describe nodes
+   51  minikube stop
+   52  minikube stop --force
+   53  shutdown -h now
+   54  kubectl get opds
+   55  kubectl get pods
+   56  history 
+   57  docker --version
+   58  minikube start --force
+   59  ip a
+   60  docker status
+   61  systemctl status dockr
+   62  systemctl status docker
+   63  kubectl get node
+   64  kubectl get nodes
+   65  kubectl get pods
+   66  kubectl get pod
+   67  ls
+   68  ls -ltrh
+   69  ls -a
+   70  ls -al
+   71  kubectl version
+   72  vi pod1.yml
+   73  kubectl apply -f pod1.yml 
+   74  vi pod1.yml
+   75  > pod1.yml 
+   76  vi pod1.yml 
+   77  kubectl apply -f pod1.yml 
+   78  kubectl get pods
+   79  kubectl describe pod testpod
+   80  kubectl logs -f testpod
+   81  kubectl get pod
+   82  kubectl delete pod testpod
+   83  minikube status
+   84  kubectl version
+   85  kubectl get nodes
+   86  ip a
+   87  kubectl get nodes -a
+   88  kubectl get nodes --all
+   89  kubectl get nodes --help
+   90  kubectl describe node
+   91  kubectl describe node minikube
+   92  kubectl get pods
+   93  kubectl apply -f pod1.yml 
+   94  kubectl get pods
+   95  cat pod1.yml 
+   96  kubectl get pods
+   97  kubectl get pods -o wide
+   98  kubectl describe pod/testpod
+   99  kubectl logs -f testpod
+  100  curl google.com
+  101  kubectl get pod
+  102  kubectl delete pod testpod
+  103  vi pod1.yml 
+  104  kubectl get pods
+  105  kubectl apply -f pod1.yml 
+  106  kubectl get pods
+  107  cat pod1.yml 
+  108  vi pod1.yml 
+  109  kubectl get pods\
+  110  kubectl get pods
+  111  kubectl get pods -o wide
+  112  kubectl describe pod testpod
+  113  kubectl delete -f pod1.yml 
+  114  vi pod2.yml
+  115  kubectl apply -f pod2.yml 
+  116  kubectl get pods
+  117  kubectl describe pod testpod3
+  118  kubectl logs -f testpod3
+  119  kubectl logs -f testpod3 -c c00
+  120  kubectl logs -f testpod3 -c c01
+  121  kubectl exec testpod3 -it -c c00 /bin/bash
+  122  kubectl get pods
+  123  kubectl exec testpod3 -it -c c00 --/bin/bash
+  124  kubectl exec testpod3 -it -c c00 -- /bin/bash
+  125  kubectl exec testpod3 -it -c c01 -- /bin/bash
+  126  cat /etc/sos/
+  127  cat /etc/os-release 
+  128  clear
+  129  cat pod2.yml 
+  130  kubectl logs testpod3
+  131  kubectl logs pod testpod3
+  132  kubectl logs -f testpod3 -c c00
+  133  kubectl logs -f testpod3 -c c01
+  134  vi pod2.yml 
+  135  kubectl delete pod testpod3
+  136  top
+  137  vi pod2.yml 
+  138  kubectl apply -f pod2.yml 
+  139  kubectl get pods
+  140  kubectl logs -f testpod3
+  141  kubectl logs -f testpod3 -c c00
+  142  kubectl logs -f testpod3 -c c01
+  143  kubectl logs -f testpod3 -c c02
+  144  kubectl exec testpod3 -c c00 --hostname
+  145  kubectl exec testpod3 -c c00 --hostname -i
+  146  kubectl exec testpod3 -c c00 -- hostname -i
+  147  kubectl exec testpod3 -c c01 -- hostname -i
+  148  kubectl exec testpod3 -c c02 -- hostname -i
+  149  kubectl exec testpod3 -it -c c00 -- /bin/bash
+  150  kubectl exec testpod3 -it -c c02 -- /bin/bash
+  151  kubectl delete -f pod2.yml 
+  152  vi pod3.yml
+  153  kubectl apply -f pod3.yml 
+  154  ls
+  155  kubectl get pods
+  156  kubectl exec environments -it -- /bin/bash
+  157  kubectl get pods
+  158  kubectl logs -f environments
+  159  kubectl get node
+  160  kubectl get nodes
+  161  kubectl get nodes -o wide
+  162  kubectl exec environments -i -- hostname
+  163  history 
+  164  kubectl exec environments -- hostname -i
+  165  kubectl describe environments
+  166  kubectl describe pod environments
+  167  kubectl exec environments -it -- /bin/bash
+  168  kubectl delete -f pod3.yml 
+  169  vi pod4.yml
+  170  kubectl apply -f pod4.yml 
+  171  kubectl get pods
+  172  kubectl get pods -o wide
+  173  curl 10.244.0.10:80
+  174  kubectl get pods -o wide
+  175  curl 10.244.0.10:80
+  176  curl http://10.244.0.10:80
+  177  curl 10.244.0.10:80
+  178  kubectl get pods
+  179  kubectl get pods -o wide
+  180  curl 10.244.0.10:80
+  181  vi pod4.yml
+  182  curl 10.244.0.10:80
+  183  kubectl delete -f pod4.yml 
+  184  kubectl apply -f pod4.yml 
+  185  kubectl get pods
+  186  kubectl describe nodelabels
+  187  kubectl describe pod nodelabels
+  188  kubectl delete -f pod6.yml 
+  189  kubectl get pods
+  190  kubectl deleted pod testpod4
+  191  kubectl delete pod testpod4
+  192  kubectl get pods
+  193  vi rc.yml
+  194  kubectl apply -f rc.yml 
+  195  vi rc.yml 
+  196  cat rc.yml 
+  197  kubectl apply -f rc.yml 
+  198  kubectl get pods
+  199  kubectl get --help | grep replica
+  200  kubectl get rc
+  201  kubectl describe rc myreplica
+  202  kubectl get pods
+  203  kubectl delete pod myreplica-2jcqm
+  204  kubectl get pods
+  205  kubectl get pods myreplica-9bjrt
+  206  kubectl get pod myreplica-9bjrt -o wide
+  207  kubectl get rc
+  208  kubectl describe rc myreplica
+  209  kubectl get pods --show-labels
+  210  vi rc.yml 
+  211  kubectl scale --replicas=5 rc -l myname=bhupinder
+  212  kubectl get pods --show-labels
+  213  kubectl get pods
+  214  kubectl get pods -o wide
+  215  kubectl get rc
+  216  kubectl apply -f rc.yml 
+  217  kubectl get rc
+  218  kubectl describe rc myreplica
+  219  kubectl get pods
+  220  kubectl scale --replicas=3 rc -l myname=bhupinder
+  221  kubectl get pods
+  222  kubectl get rc
+  223  kubectl get rc -o wide
+  224  kubectl get pods --show-labels
+  225  kubectl delete -f rc.yml 
+  226  kubectl get pods
+  227  kubectl get rc
+  228  kubectl get pods
+  229  vi myrs.yml
+  230  cat myrs.yml 
+  231  kubectl apply -f myrs.yml 
+  232  kubectl get rs
+  233  kubectl get pods
+  234  kubectl get rs -o wide
+  235  kubectl scale --replcas=1 rs/myrs
+  236  kubectl scale --replicas=1 rs/myrs
+  237  kubectl get rs
+  238  kubectl get opods
+  239  kubectl get pods
+  240  kubectl delete pod myrs-2fz7c
+  241  kubectl get rs
+  242  kubectl get pods
+  243  kubectl delete rs/myrs
+  244  kubectl get rs
+  245  kubectl get pods
+  246  kubectl describe rs/myrs
+  247  history > k8s-2.txt
