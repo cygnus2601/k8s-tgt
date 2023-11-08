@@ -5,12 +5,12 @@ metadata:
 spec:
   replicas: 5            
   selector:        
-    myname: bhupinder                          
+    myname: m1                          
   template:                
     metadata:
       name: testpod6
       labels:            
-        myname: bhupinder
+        myname: m1
     spec:
      containers:
        - name: c00
