@@ -6,10 +6,10 @@ spec:
   containers:
     - name: c00
       image: ubuntu
-      command: ["/bin/bash", "-c", "while true; do echo Technical-Guftgu; sleep 10 ; done"]
+      command: ["/bin/bash", "-c", "while true; do echo Technical-m2; sleep 10 ; done"]
     - name: c01
       image: ubuntu
-      command: ["/bin/bash", "-c", "while true; do echo Hello-Bhupinder; sleep 10 ; done"]
+      command: ["/bin/bash", "-c", "while true; do echo Hello-m3; sleep 10 ; done"]
     - name: c02
       image: ubuntu
       command: ["/bin/bash", "-c", "while true; do echo Hello-Guys; sleep 10 ; done"]
