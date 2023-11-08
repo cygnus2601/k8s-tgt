@@ -6,17 +6,17 @@ metadata:
   name: mylivenessprobe
 spec:
   containers:
-    - name: liveness
-      image: ubuntu
-      args:
-        - /bin/sh
-        - -c
-        - touch /tmp/healthy;sleep 1000
-      livenessProbe:
-        exec:
-          command:
-            - cat 
-            - /tmp/healthy
-        initialDelaySeconds: 5
-        periodSeconds: 5
-        timeoutSeconds: 30
+  - name: liveness
+    image: ubuntu
+    args:
+    - /bin/sh
+    - -c
+    - touch /tmp/healthy; sleep 1000
+    livenessProbe:                                          
+      exec:
+        command:                                         
+        - cat                
+        - /tmp/healthy
+      initialDelaySeconds: 5          
+      periodSeconds: 5                                 
+      timeoutSeconds: 30 
